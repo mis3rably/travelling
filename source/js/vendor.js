@@ -1,7 +1,7 @@
 import Swiper from './vendor/swiper';
 import L from './vendor/leaflet';
 
-const heroSlider = new Swiper('.hero__slider', {
+export const heroSlider = new Swiper('.hero__slider', {
   slidesPerGroup: 1,
 
   pagination: {
@@ -10,7 +10,7 @@ const heroSlider = new Swiper('.hero__slider', {
   },
 });
 
-const tourSlider = new Swiper('.upcoming__slider', {
+export const tourSlider = new Swiper('.upcoming__slider', {
   slidesPerView: 1,
   spaceBetween: 18,
 
@@ -31,7 +31,7 @@ const tourSlider = new Swiper('.upcoming__slider', {
   },
 });
 
-const coachingSlider = new Swiper('.coaching__slider-wrapper', {
+export const coachingSlider = new Swiper('.coaching__slider-wrapper', {
   slidesPerView: 1,
   spaceBetween: 30,
 
@@ -53,7 +53,7 @@ const coachingSlider = new Swiper('.coaching__slider-wrapper', {
 });
 
 
-const reviewsSlider = new Swiper('.reviews__slider', {
+export const reviewsSlider = new Swiper('.reviews__slider', {
   slidesPerView: 1,
   spaceBetween: 30,
 
@@ -70,7 +70,7 @@ const reviewsSlider = new Swiper('.reviews__slider', {
   },
 });
 
-const breakpoint = window.matchMedia('(min-width:1200px)');
+export const breakpoint = window.matchMedia('(min-width:1200px)');
 
 let advantagesSlider = new Swiper('.advantages__slider', {
   slidesPerView: 'auto',
@@ -107,7 +107,7 @@ breakpoint.addEventListener('change', (evt) => {
   }
 });
 
-const gallerySlider = new Swiper('.gallery__slider', {
+export const gallerySlider = new Swiper('.gallery__slider', {
   slidesPerView: 'auto',
   spaceBetween: 3,
   initialSlide: 2,
