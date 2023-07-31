@@ -8,3 +8,5 @@
 6. Используемый инструмент автоматизации: Gulp.
 7. Кроссбраузерность: Chrome, Firefox, Safari.
 8. JavaScript: минимальная реализация, модальные окна, переключения и др.
+
+<a href="https://mis3rably.github.io/travelling/">Ссылка на проект</a>
