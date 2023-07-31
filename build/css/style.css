@@ -5502,7 +5502,7 @@ button,
 }
 @media (max-width: 767px) {
   .gallery__item--divided {
-    width: 158px;
+    width: 172px;
     -ms-grid-rows: 103px 153px;
     grid-template-rows: 103px 153px;
     gap: 3px;
