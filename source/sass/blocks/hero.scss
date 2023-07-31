@@ -170,6 +170,11 @@
   }
 }
 
+.hero__video-wrapper.is-active .hero__video-button,
+.hero__video-wrapper.is-active img {
+  display: none;
+}
+
 .hero__button-path {
   stroke: transparent;
   stroke-width: 1px;
