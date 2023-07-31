@@ -3921,7 +3921,7 @@ button,
 }
 
 .reviews {
-  padding: 6px 0 66px;
+  padding: 6px 0 0;
   overflow: hidden;
 }
 
@@ -4090,7 +4090,7 @@ button,
 }
 
 .advantages {
-  padding: 27px 0 45px;
+  padding: 90px 0 45px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4274,12 +4274,12 @@ button,
 .advantages__clouds-img--left {
   width: 712px;
   height: 391px;
-  top: -200px;
+  top: -224px;
   left: -2px;
 }
 
 .advantages__clouds-img--right {
-  top: -15px;
+  top: -38px;
   right: 0;
 }
 
@@ -5897,7 +5897,11 @@ button,
   }
 
   .about__img {
-    width: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
   }
 
   .about__title {
