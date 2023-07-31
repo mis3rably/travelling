@@ -3880,8 +3880,7 @@ button,
 @media (max-width: 767px) {
   .upcoming__clouds-img {
     right: 0;
-    bottom: auto;
-    top: 71px;
+    bottom: -139px;
   }
 }
 
