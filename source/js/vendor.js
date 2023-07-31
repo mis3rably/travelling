@@ -13,6 +13,7 @@ export const heroSlider = new Swiper('.hero__slider', {
 export const tourSlider = new Swiper('.upcoming__slider', {
   slidesPerView: 1,
   spaceBetween: 18,
+  lazy: true,
 
   navigation: {
     nextEl: '.upcoming__control--next',
@@ -34,6 +35,7 @@ export const tourSlider = new Swiper('.upcoming__slider', {
 export const coachingSlider = new Swiper('.coaching__slider-wrapper', {
   slidesPerView: 1,
   spaceBetween: 30,
+  lazy: true,
 
   navigation: {
     nextEl: '.coaching__slider-control--next',
@@ -56,6 +58,7 @@ export const coachingSlider = new Swiper('.coaching__slider-wrapper', {
 export const reviewsSlider = new Swiper('.reviews__slider', {
   slidesPerView: 1,
   spaceBetween: 30,
+  lazy: true,
 
   navigation: {
     nextEl: '.reviews__slider-control--next',
@@ -78,6 +81,7 @@ let advantagesSlider = new Swiper('.advantages__slider', {
   initialSlide: 2,
   centeredSlides: true,
   init: false,
+  lazy: true,
 
   navigation: {
     nextEl: '.advantages__slider-control--next',
@@ -111,6 +115,7 @@ export const gallerySlider = new Swiper('.gallery__slider', {
   slidesPerView: 'auto',
   spaceBetween: 3,
   initialSlide: 2,
+  lazy: true,
 
   breakpoints: {
     768: {
@@ -134,12 +139,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 const myIcon = L.icon({
-  iconUrl: '/img/map/marker-icon.png',
-  iconRetinaUrl: '/img/map/marker-icon-2x.png',
+  iconUrl: './img/map/marker-icon.png',
+  iconRetinaUrl: './img/map/marker-icon-2x.png',
   iconSize: [25, 41],
   iconAnchor: [25, 25],
   popupAnchor: [-3, -76],
-  shadowUrl: '/img/map/marker-shadow.png',
+  shadowUrl: './img/map/marker-shadow.png',
   shadowSize: [41, 41],
   shadowAnchor: [25, 25],
 });

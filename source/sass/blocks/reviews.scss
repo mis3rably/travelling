@@ -121,6 +121,7 @@
 
 .reviews__img-wrapper {
   background-color: $color-light-orange;
+  height: 253px;
 
   @include vp-767 {
     width: 100%;
