@@ -5739,8 +5739,7 @@ button,
 
   .upcoming__clouds-img {
     right: 0;
-    bottom: auto;
-    top: 71px;
+    bottom: -139px;
   }
 
   .upcoming__slide-title {
