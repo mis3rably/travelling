@@ -13,7 +13,6 @@ export const heroSlider = new Swiper('.hero__slider', {
 export const tourSlider = new Swiper('.upcoming__slider', {
   slidesPerView: 1,
   spaceBetween: 18,
-  lazy: true,
 
   navigation: {
     nextEl: '.upcoming__control--next',
