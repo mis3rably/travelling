@@ -1968,6 +1968,7 @@ html {
   line-height: 1;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #2d383f;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;

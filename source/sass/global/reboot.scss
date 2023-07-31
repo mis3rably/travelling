@@ -18,6 +18,7 @@ html {
   line-height: 1;
   font-family: $ff-montserrat;
   color: $color-primary-black;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
