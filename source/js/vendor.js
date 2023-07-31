@@ -134,12 +134,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 const myIcon = L.icon({
-  iconUrl: '../../img/map/marker-icon.png',
-  iconRetinaUrl: '../../img/map/marker-icon-2x.png',
+  iconUrl: '/img/map/marker-icon.png',
+  iconRetinaUrl: '/img/map/marker-icon-2x.png',
   iconSize: [25, 41],
   iconAnchor: [25, 25],
   popupAnchor: [-3, -76],
-  shadowUrl: '../../img/map/marker-shadow.png',
+  shadowUrl: '/img/map/marker-shadow.png',
   shadowSize: [41, 41],
   shadowAnchor: [25, 25],
 });
