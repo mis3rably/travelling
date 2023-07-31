@@ -1,0 +1,18 @@
+.rating__list {
+  list-style: none;
+  padding: 0;
+  gap: 1px;
+  display: flex;
+
+  @include vp-767 {
+    gap: 0;
+  }
+}
+
+.rating__item-svg {
+  color: transparent;
+
+  &--filled {
+    color: $color-default-white;
+  }
+}

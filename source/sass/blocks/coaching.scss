@@ -1,0 +1,284 @@
+.coaching {
+  padding: 19px 0 88px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    padding: 19px 0 12px;
+  }
+}
+
+.coaching__slider-wrapper {
+  width: calc(100% + 40px);
+  padding: 0 10px 30px 30px;
+  overflow: hidden;
+  margin: 0 0 0 -30px;
+
+  @include vp-1199 {
+    padding: 0 20px 30px 20px;
+    margin: 0 0 0 -20px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px 15px 15px;
+    margin: 0 0 0 -15px;
+    width: calc(100% + 30px);
+  }
+}
+
+.coaching__title {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 800;
+  padding: 19px 111px 0 0;
+
+  @include vp-1199 {
+    font-size: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+  }
+}
+
+.coaching__title-shadow {
+  position: absolute;
+  font-size: 55px;
+  font-weight: 800;
+  opacity: 0.03;
+  top: 0;
+
+  @include vp-1199 {
+    font-size: 40px;
+  }
+
+  @include vp-767 {
+    font-size: 26px;
+  }
+}
+
+.coaching__title-wrapper {
+  position: relative;
+  width: fit-content;
+  max-width: calc(100% - 400px);
+  margin: 0 0 32px;
+
+  @include vp-1199 {
+    max-width: calc(100% - 150px);
+    margin: 0 0 21px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+  }
+}
+
+.coaching__desc {
+  font-size: 16px;
+  max-width: calc(100% - 400px);
+  line-height: 1.5;
+  margin: 0 0 49px;
+
+  @include vp-1199 {
+    max-width: calc(100% - 150px);
+    margin: 0 0 57px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 32px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.coaching__slider-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 34px;
+
+  @include vp-1199 {
+    margin: 0 0 23px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 29px;
+  }
+}
+
+.coaching__slider-title {
+  font-size: 21px;
+  font-weight: 700;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+  }
+}
+
+.coaching__slider-control {
+  padding: 17px 12px;
+  width: 37px;
+  height: 35px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  background-color: $color-additional;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border-color, background-color $trans-default;
+
+  svg {
+    fill: $color-default-white;
+    transition: fill $trans-default;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border-color: $color-active;
+
+    svg {
+      fill: $color-active;
+    }
+  }
+
+  &:active {
+    background-color: $color-active;
+
+    svg {
+      fill: $color-default-white;
+    }
+  }
+
+  &:disabled {
+    background-color: $color-additional-20;
+    pointer-events: none;
+  }
+}
+
+.coaching__slider-controls {
+  display: flex;
+  gap: 5px;
+}
+
+
+.coaching__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-height: 377px;
+
+  @include vp-1199 {
+    min-height: 411px;
+  }
+
+  @include vp-767 {
+    min-height: 385px;
+  }
+}
+
+.coaching__item {
+  padding: 19px;
+  border: 1px solid $color-default-white;
+  box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
+  height: auto;
+
+  @include vp-1199 {
+    padding: 14px;
+  }
+
+  @include vp-767 {
+    padding: 20px;
+  }
+}
+
+.coaching__item-img {
+  margin: 0 0 15px;
+  aspect-ratio: 238 / 212;
+  background-color: $color-light-orange;
+
+  img {
+    width: 100%;
+  }
+
+  @include vp-1199 {
+    aspect-ratio: 176 / 212;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 250 / 212;
+  }
+}
+
+.coaching__coach-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 14px;
+
+  @include vp-1199 {
+    margin: 0 0 11px;
+  }
+
+  @include vp-767 {
+    padding: 0 12px 0 0;
+  }
+}
+
+.coaching__coach-name {
+  margin: 0;
+  max-width: 111px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.coaching__coach-link {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color-additional-10;
+  transition: border-color, background-color $trans-default;
+  overflow: hidden;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: $color-primary-black;
+  }
+
+  &:active {
+    background-color: $color-icon-additional;
+    border-color: transparent;
+  }
+
+  &:active svg {
+    fill: $color-default-white;
+  }
+
+  &--disabled svg {
+    fill: $color-primary-black-30;
+  }
+}
+
+.coaching__coach-desc {
+  font-size: 12px;
+  line-height: 1.3;
+  margin: 0;
+
+  @include vp-1199 {
+    line-height: 1.5;
+  }
+}
