@@ -19,6 +19,7 @@
 
 .about__img {
   align-self: center;
+  background-color: $color-silk;
 
   @include vp-1199 {
     width: 50%;

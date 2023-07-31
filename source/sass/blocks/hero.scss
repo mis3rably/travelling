@@ -170,13 +170,6 @@
   }
 }
 
-.hero__video-wrapper.is-active .hero__video-button,
-.hero__video-wrapper.js-disabled .hero__video-button,
-.hero__video-wrapper.is-active img,
-.hero__video-wrapper.js-disabled img {
-  display: none;
-}
-
 .hero__button-path {
   stroke: transparent;
   stroke-width: 1px;
@@ -227,7 +220,7 @@
   position: relative;
   min-height: 538px;
   padding: 180px 120px 80px;
-  background-color: $color-neon-blue;
+  background-color: $color-danube;
 
   @include vp-1199 {
     padding: 173px 45px 203px;

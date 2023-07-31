@@ -36,7 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const questionsForm = document.querySelector('.questions__form');
 
     if (heroVideoWrapper && heroVideo && heroPreview && heroVideoButton) {
-      heroVideoWrapper.classList.remove('js-disabled');
       heroVideoButton.addEventListener('click', () => {
         heroVideoWrapper.classList.toggle('is-active');
         heroVideoWrapper.style.zIndex = '1';
