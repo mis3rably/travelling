@@ -339,6 +339,11 @@
   bottom: -654px;
   z-index: -1;
 
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
   @include vp-1199 {
     right: -308px;
     bottom: -633px;
@@ -346,7 +351,8 @@
 
   @include vp-767 {
     right: 0;
-    bottom: -139px;
+    bottom: auto;
+    top: 71px;
   }
 }
 
