@@ -2216,6 +2216,14 @@ button,
           justify-content: space-between;
   z-index: 2;
 }
+@media (min-width: 1200px) {
+  .header {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
 @media (max-width: 1199px) {
   .header {
     padding: 30px 45px;

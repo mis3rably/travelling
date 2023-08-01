@@ -7,6 +7,11 @@
   justify-content: space-between;
   z-index: 2;
 
+  @media (min-width: 1200px) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   @include vp-1199 {
     padding: 30px 45px;
   }
