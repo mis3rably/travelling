@@ -38,7 +38,7 @@
 
 .header--opened .logo__svg {
   @include vp-1199 {
-    fill: $color-primary-black;
+    color: $color-primary-black;
   }
 }
 

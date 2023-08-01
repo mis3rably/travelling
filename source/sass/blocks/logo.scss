@@ -3,22 +3,22 @@
 }
 
 .logo__svg {
-  fill: $color-default-white;
+  color: $color-default-white;
 }
 
 .logo--header .logo__svg {
-  transition: fill $trans-default;
+  transition: color $trans-default;
 
   @include hover-focus {
-    fill: $color-active;
+    color: $color-active;
   }
 
   &:active {
-    fill: $color-additional;
+    color: $color-additional;
   }
 
   &--disabled {
-    fill: $color-additional-20;
+    color: $color-additional-20;
   }
 
   @include vp-1199 {
@@ -33,19 +33,19 @@
 }
 
 .logo--footer .logo__svg {
-  fill: $color-primary-black;
-  transition: fill $trans-default;
+  color: $color-primary-black;
+  transition: color $trans-default;
 
   @include hover-focus {
-    fill: $color-active;
+    color: $color-active;
   }
 
   &:active {
-    fill: $color-additional;
+    color: $color-additional;
   }
 
   &--disabled {
-    fill: $color-additional-20;
+    color: $color-additional-20;
   }
 
   @include vp-1199 {

@@ -228,7 +228,7 @@
   background-color: $color-danube;
 
   @include vp-1199 {
-    padding: 173px 45px 203px;
+    padding: 173px 45px 189px;
     min-height: 1024px;
   }
 
@@ -255,7 +255,7 @@
   @include vp-1199 {
     text-align: center;
     padding: 0 125px;
-    bottom: 121px;
+    bottom: 87px;
   }
 
   @include vp-767 {
@@ -283,11 +283,12 @@
 
   @include vp-1199 {
     position: static;
-    margin: 34px 0 0;
+    margin: 53px 0 0;
+    aspect-ratio: 442 / 326;
 
     img {
       width: 442px;
-      height: 365px;
+      height: 326px;
     }
   }
 
