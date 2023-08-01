@@ -4855,6 +4855,13 @@ button,
 }
 
 @media (min-width: 1200px) {
+  .header {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
   .header__navigation-list {
     max-width: 574px;
   }
