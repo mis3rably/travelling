@@ -2,8 +2,6 @@
   padding: 40px 120px;
   background-color: transparent;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -95,10 +93,10 @@
 
 .header--opened .header__burger-wrapper {
   @include vp-1199 {
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
     padding: 124px 45px 70px;
     transition: transform cubic-bezier(0.21, 0.67, 0.58, 1) 0.3s;
     background-color: $color-default-white;

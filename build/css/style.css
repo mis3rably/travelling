@@ -2205,10 +2205,6 @@ button,
   padding: 40px 120px;
   background-color: transparent;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2345,10 +2341,10 @@ button,
 }
 @media (max-width: 1199px) {
   .header--opened .header__burger-wrapper {
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
     padding: 124px 45px 70px;
     -webkit-transition: -webkit-transform cubic-bezier(0.21, 0.67, 0.58, 1) 0.3s;
     transition: -webkit-transform cubic-bezier(0.21, 0.67, 0.58, 1) 0.3s;
