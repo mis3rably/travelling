@@ -80,6 +80,7 @@ let advantagesSlider = new Swiper('.advantages__slider', {
   initialSlide: 2,
   centeredSlides: true,
   init: false,
+  loop: true,
   lazy: true,
 
   navigation: {
@@ -99,6 +100,8 @@ breakpoint.addEventListener('change', (evt) => {
       spaceBetween: 30,
       initialSlide: 2,
       centeredSlides: true,
+      lazy: true,
+      loop: true,
 
       navigation: {
         nextEl: '.advantages__slider-control--next',
