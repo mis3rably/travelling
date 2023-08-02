@@ -5187,6 +5187,7 @@ button,
 
   .coaching__title-shadow {
     font-size: 40px;
+    top: 6px;
   }
 
   .coaching__title-wrapper {
@@ -5412,6 +5413,7 @@ button,
 
   .gallery__title-shadow {
     font-size: 40px;
+    bottom: -2px;
   }
 
   .gallery__desc {
@@ -5524,6 +5526,7 @@ button,
 
   .contacts__title-shadow {
     font-size: 40px;
+    top: -5px;
   }
 
   .contacts__list {
@@ -5804,6 +5807,7 @@ button,
 
   .coaching__title-shadow {
     font-size: 26px;
+    top: 16px;
   }
 
   .coaching__title-wrapper {
@@ -5936,6 +5940,10 @@ button,
     margin: 0 0 33px;
   }
 
+  .about__title-shadow {
+    font-size: 26px;
+  }
+
   .about__text-wrapper {
     max-width: 100%;
     padding: 0 15px;
@@ -6026,6 +6034,7 @@ button,
 
   .advantages__title-shadow {
     font-size: 26px;
+    top: 9px;
   }
 
   .advantages__list {
@@ -6145,6 +6154,7 @@ button,
 
   .contacts__title-shadow {
     font-size: 26px;
+    top: 5px;
   }
 
   .contacts__list {
