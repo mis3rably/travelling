@@ -12,14 +12,13 @@ window.addEventListener('DOMContentLoaded', () => {
     burgerButton.addEventListener('click', () => {
       if (!header.classList.contains('header--opened')) {
         header.classList.add('header--opened');
-        header.setAttribute('aria-label', 'Закрыть бургер меню.')
+        header.setAttribute('aria-label', 'Закрыть бургер меню.');
       } else {
         header.classList.remove('header--opened');
-        header.setAttribute('aria-label', 'Открыть бургер меню.')
+        header.setAttribute('aria-label', 'Открыть бургер меню.');
       }
     });
   }
-  window.scrollLock = new ScrollLock();
   window.addEventListener('load', () => {
     const form = new Form();
     window.form = form;
