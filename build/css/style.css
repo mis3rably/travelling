@@ -4070,11 +4070,13 @@ button,
 @media (max-width: 1199px) {
   .coaching__title-shadow {
     font-size: 40px;
+    top: 6px;
   }
 }
 @media (max-width: 767px) {
   .coaching__title-shadow {
     font-size: 26px;
+    top: 16px;
   }
 }
 
@@ -4705,6 +4707,11 @@ button,
     font-size: 40px;
   }
 }
+@media (max-width: 767px) {
+  .about__title-shadow {
+    font-size: 26px;
+  }
+}
 
 .about__text-wrapper {
   padding: 36px 0 0;
@@ -5143,6 +5150,7 @@ button,
 @media (max-width: 767px) {
   .advantages__title-shadow {
     font-size: 26px;
+    top: 9px;
   }
 }
 
@@ -5440,6 +5448,7 @@ button,
 @media (max-width: 1199px) {
   .gallery__title-shadow {
     font-size: 40px;
+    bottom: -2px;
   }
 }
 @media (max-width: 767px) {
@@ -6016,11 +6025,13 @@ button,
 @media (max-width: 1199px) {
   .contacts__title-shadow {
     font-size: 40px;
+    top: -5px;
   }
 }
 @media (max-width: 767px) {
   .contacts__title-shadow {
     font-size: 26px;
+    top: 5px;
   }
 }
 
