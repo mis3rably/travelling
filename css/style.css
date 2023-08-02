@@ -3593,7 +3593,7 @@ button,
 
 .coaching__slider-wrapper {
   width: calc(100% + 25px);
-  padding: 0 10px 30px 15px;
+  padding: 15px 10px 30px 15px;
   overflow: hidden;
   margin: 0 0 0 -15px;
 }
@@ -3639,7 +3639,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin: 0 0 34px;
+  margin: 0 0 19px;
 }
 
 .coaching__slider-title {
@@ -3938,6 +3938,16 @@ button,
 .reviews {
   padding: 6px 0 0;
   overflow: hidden;
+}
+
+.reviews .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .reviews__heading-wrapper {
@@ -5181,7 +5191,7 @@ button,
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
-    padding: 0 10px 30px 25px;
+    padding: 15px 10px 30px 25px;
     width: calc(100% + 35px);
     max-width: 1000px;
   }
@@ -5206,7 +5216,7 @@ button,
   }
 
   .coaching__slider-heading {
-    margin: 0 0 23px;
+    margin: 0 0 8px;
   }
 
   .coaching__slider-title {
@@ -5802,7 +5812,7 @@ button,
   }
 
   .coaching__slider-wrapper {
-    padding: 0 9px 15px 24px;
+    padding: 15px 9px 15px 24px;
     max-width: 600px;
   }
 
@@ -5830,7 +5840,7 @@ button,
   }
 
   .coaching__slider-heading {
-    margin: 0 0 24px;
+    margin: 0 0 9px;
   }
 
   .coaching__slider-title {
@@ -6014,7 +6024,12 @@ button,
   .reviews__slider {
     padding: 20px 15px;
     width: calc(100% + 30px);
-    margin: 0 0 0 -15px;
+    max-width: 600px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    overflow: hidden;
+    margin: 0;
   }
 
   .reviews__text-wrapper {
