@@ -3470,15 +3470,21 @@ button,
 
 .upcoming__slider {
   overflow: hidden;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
 }
 @media (max-width: 1199px) {
   .upcoming__slider {
+    max-width: 1000px;
     padding: 0 7px;
   }
 }
 @media (max-width: 767px) {
   .upcoming__slider {
     padding: 0;
+    max-width: 600px;
   }
 }
 
@@ -3516,7 +3522,6 @@ button,
 @media (max-width: 767px) {
   .upcoming__title {
     font-size: 22px;
-    width: 156px;
   }
 }
 
@@ -3532,6 +3537,7 @@ button,
 @media (max-width: 767px) {
   .upcoming__title-wrapper {
     padding: 0;
+    width: 156px;
   }
 }
 
@@ -4004,23 +4010,36 @@ button,
   }
 }
 
+.coaching .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .coaching__slider-wrapper {
-  width: calc(100% + 40px);
-  padding: 0 10px 30px 30px;
+  width: calc(100% + 25px);
+  padding: 0 10px 30px 15px;
   overflow: hidden;
-  margin: 0 0 0 -30px;
+  margin: 0 0 0 -15px;
 }
 @media (max-width: 1199px) {
   .coaching__slider-wrapper {
-    padding: 0 20px 30px 20px;
-    margin: 0 0 0 -20px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding: 0 10px 30px 25px;
+    width: calc(100% + 35px);
+    max-width: 1000px;
   }
 }
 @media (max-width: 767px) {
   .coaching__slider-wrapper {
-    padding: 0 15px 15px 15px;
-    margin: 0 0 0 -15px;
-    width: calc(100% + 30px);
+    padding: 0 9px 15px 24px;
+    max-width: 600px;
   }
 }
 
@@ -4093,7 +4112,7 @@ button,
 }
 @media (max-width: 767px) {
   .coaching__desc {
-    margin: 0 0 32px;
+    margin: 0 0 36px;
   }
 }
 @media (max-width: 767px) {
@@ -4123,7 +4142,7 @@ button,
 }
 @media (max-width: 767px) {
   .coaching__slider-heading {
-    margin: 0 0 29px;
+    margin: 0 0 24px;
   }
 }
 
@@ -4206,6 +4225,7 @@ button,
 @media (max-width: 1199px) {
   .coaching__list {
     min-height: 411px;
+    max-width: 1000px;
   }
 }
 @media (max-width: 767px) {
@@ -5881,7 +5901,7 @@ button,
 }
 
 .contacts {
-  padding: 60px 0 104px;
+  padding: 63px 0 104px;
 }
 @media (max-width: 1199px) {
   .contacts {

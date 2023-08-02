@@ -11,7 +11,7 @@ export const heroSlider = new Swiper('.hero__slider', {
 });
 
 export const tourSlider = new Swiper('.upcoming__slider', {
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   spaceBetween: 18,
 
   navigation: {
