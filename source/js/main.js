@@ -1,5 +1,4 @@
 import {Form} from './modules/form-validate/form';
-import {ScrollLock} from './modules/scroll-lock/scroll-lock';
 
 // ---------------------------------
 
@@ -8,18 +7,15 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   const header = document.querySelector('.header');
   const burgerButton = header.querySelector('.header__burger-button');
-  const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth;
 
   if (burgerButton && header) {
     burgerButton.addEventListener('click', () => {
       if (!header.classList.contains('header--opened')) {
         header.classList.add('header--opened');
-        header.style.width = `calc(100% - ${getScrollbarWidth()}px)`;
-        window.scrollLock.disableScrolling();
+        header.setAttribute('aria-label', 'Закрыть бургер меню.')
       } else {
         header.classList.remove('header--opened');
-        header.style = '';
-        window.scrollLock.enableScrolling();
+        header.setAttribute('aria-label', 'Открыть бургер меню.')
       }
     });
   }

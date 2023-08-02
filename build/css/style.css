@@ -2216,6 +2216,10 @@ button,
           justify-content: space-between;
   z-index: 2;
 }
+.header--opened {
+  position: fixed;
+  top: 0;
+}
 @media (min-width: 1200px) {
   .header {
     left: 50%;
