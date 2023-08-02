@@ -2332,6 +2332,11 @@ button,
   z-index: 2;
 }
 
+.header--opened {
+  position: fixed;
+  top: 0;
+}
+
 .header__navigation-list {
   display: -webkit-box;
   display: -ms-flexbox;
