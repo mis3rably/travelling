@@ -3198,6 +3198,10 @@ button,
 
 .upcoming__slider {
   overflow: hidden;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  width: 100%;
 }
 
 .upcoming__heading-wrapper {
@@ -3572,11 +3576,21 @@ button,
   overflow: hidden;
 }
 
+.coaching .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .coaching__slider-wrapper {
-  width: calc(100% + 40px);
-  padding: 0 10px 30px 30px;
+  width: calc(100% + 25px);
+  padding: 0 10px 30px 15px;
   overflow: hidden;
-  margin: 0 0 0 -30px;
+  margin: 0 0 0 -15px;
 }
 
 .coaching__title {
@@ -4680,7 +4694,7 @@ button,
 }
 
 .contacts {
-  padding: 60px 0 104px;
+  padding: 63px 0 104px;
 }
 
 .contacts .container {
@@ -5111,6 +5125,7 @@ button,
   }
 
   .upcoming__slider {
+    max-width: 1000px;
     padding: 0 7px;
   }
 
@@ -5158,8 +5173,12 @@ button,
   }
 
   .coaching__slider-wrapper {
-    padding: 0 20px 30px 20px;
-    margin: 0 0 0 -20px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    padding: 0 10px 30px 25px;
+    width: calc(100% + 35px);
+    max-width: 1000px;
   }
 
   .coaching__title {
@@ -5190,6 +5209,7 @@ button,
 
   .coaching__list {
     min-height: 411px;
+    max-width: 1000px;
   }
 
   .coaching__item {
@@ -5678,6 +5698,7 @@ button,
 
   .upcoming__slider {
     padding: 0;
+    max-width: 600px;
   }
 
   .upcoming__heading-wrapper {
@@ -5687,11 +5708,11 @@ button,
 
   .upcoming__title {
     font-size: 22px;
-    width: 156px;
   }
 
   .upcoming__title-wrapper {
     padding: 0;
+    width: 156px;
   }
 
   .upcoming__title-shadow {
@@ -5773,9 +5794,8 @@ button,
   }
 
   .coaching__slider-wrapper {
-    padding: 0 15px 15px 15px;
-    margin: 0 0 0 -15px;
-    width: calc(100% + 30px);
+    padding: 0 9px 15px 24px;
+    max-width: 600px;
   }
 
   .coaching__title {
@@ -5791,7 +5811,7 @@ button,
   }
 
   .coaching__desc {
-    margin: 0 0 32px;
+    margin: 0 0 36px;
   }
 
   .coaching__desc {
@@ -5801,7 +5821,7 @@ button,
   }
 
   .coaching__slider-heading {
-    margin: 0 0 29px;
+    margin: 0 0 24px;
   }
 
   .coaching__slider-title {
