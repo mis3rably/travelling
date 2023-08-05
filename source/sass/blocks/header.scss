@@ -1,20 +1,31 @@
 .header {
   padding: 40px 120px;
-  background-color: transparent;
   position: absolute;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 2;
 
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-default-black;
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
   &--opened {
     position: fixed;
     top: 0;
-  }
 
-  @media (min-width: 1200px) {
-    left: 50%;
-    transform: translateX(-50%);
+    &::before {
+      opacity: 0.5;
+    }
   }
 
   @include vp-1199 {

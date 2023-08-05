@@ -1,4 +1,5 @@
 import {Form} from './modules/form-validate/form';
+import {ScrollLock} from './modules/scroll-lock/scroll-lock';
 
 // ---------------------------------
 
@@ -7,15 +8,55 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   const header = document.querySelector('.header');
   const burgerButton = header.querySelector('.header__burger-button');
+  const heroSlide = document.querySelectorAll('.hero__slide');
+
+  if (header && heroSlide) {
+    let headerHeight = header.offsetHeight;
+
+    let observer = new MutationObserver(() => {
+      if (headerHeight !== header.offsetHeight & headerHeight < header.offsetHeight) {
+        let currentHeroPadding = window.getComputedStyle(heroSlide[0]).getPropertyValue('padding-top');
+        heroSlide.forEach((el) => {
+          el.style.paddingTop = `${header.offsetHeight - headerHeight + parseInt(currentHeroPadding, 10)}px`;
+        });
+        headerHeight = header.offsetHeight;
+      }
+    });
+
+    observer.observe(header, {
+      childList: true,
+      subtree: true,
+      characterDataOldValue: true,
+    });
+  }
+
+  window.scrollLock = new ScrollLock();
 
   if (burgerButton && header) {
+    const closeBurgerMenu = () => {
+      header.classList.remove('header--opened');
+      header.setAttribute('aria-label', 'Открыть бургер меню.');
+      window.scrollLock.enableScrolling();
+    }
+
     burgerButton.addEventListener('click', () => {
       if (!header.classList.contains('header--opened')) {
         header.classList.add('header--opened');
         header.setAttribute('aria-label', 'Закрыть бургер меню.');
+        window.scrollLock.disableScrolling();
+
+
+        const burgerList = document.querySelector('.header__navigation-list');
+
+        if (burgerList) {
+          burgerList.addEventListener('click', (evt) => {
+            if (evt.target.tagName === 'A') {
+              closeBurgerMenu();
+            }
+          });
+        }
       } else {
-        header.classList.remove('header--opened');
-        header.setAttribute('aria-label', 'Открыть бургер меню.');
+        closeBurgerMenu();
       }
     });
   }

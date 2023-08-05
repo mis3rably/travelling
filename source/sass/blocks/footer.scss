@@ -50,14 +50,12 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-content: space-between;
-  gap: 12px;
+  gap: 32px;
   width: 584px;
   flex-shrink: 0;
   transition: opacity $trans-default, transform cubic-bezier(0.21, 0.67, 0.58, 1) 0.3s;
 
   @include vp-1199 {
-    justify-content: flex-start;
     width: auto;
     max-width: 594px;
     gap: 14px 20px;

@@ -70,7 +70,7 @@
   @include vp-767 {
     padding: 0 33px 0 26px;
     display: flex;
-    gap: 20px;
+    gap: 0;
   }
 }
 
@@ -78,7 +78,7 @@
   display: flex;
   position: relative;
   gap: 15px;
-  align-items: center;
+  align-items: flex-end;
   max-width: 277px;
 
   @media (max-width: 1199px) and (min-width: 768px) {
@@ -161,28 +161,21 @@
     max-width: 100%;
     font-size: 12px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      left: -26px;
-      width: 1px;
-      height: calc(100% + 25px);
-      background-color: $color-additional;
-      opacity: 0.2;
-    }
-
     &:first-child {
-      &::after {
-        bottom: -13px;
-        height: calc(50% + 16px);
+      align-items: flex-start;
+
+      &::before {
+        bottom: auto;
+        top: 15px;
+      }
+
+      svg {
+        margin: 10px 0 0;
       }
     }
 
-    &:last-child {
-      &::after {
-        top: -13px;
-        height: calc(50% + 16px);
-      }
+    &::after {
+      content: none;
     }
   }
 
@@ -196,13 +189,14 @@
     bottom: -40px;
 
     @include vp-767 {
-      bottom: auto;
+      bottom: 11px;
       left: -33px;
     }
   }
 
   svg {
     flex-shrink: 0;
+    margin: 0 0 13px 0;
 
     @include vp-767 {
       width: 19px;
@@ -239,5 +233,14 @@
 
   @include vp-1199 {
     display: none;
+  }
+
+  @include vp-767 {
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: auto;
+    top: 15px;
+    bottom: 15px;
   }
 }

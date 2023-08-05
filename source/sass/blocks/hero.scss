@@ -226,9 +226,10 @@
   min-height: 538px;
   padding: 180px 120px 80px;
   background-color: $color-danube;
+  height: auto;
 
   @include vp-1199 {
-    padding: 173px 45px 189px;
+    padding: 170px 45px 189px;
     min-height: 1024px;
   }
 
