@@ -37,14 +37,13 @@ window.addEventListener('DOMContentLoaded', () => {
       header.classList.remove('header--opened');
       header.setAttribute('aria-label', 'Открыть бургер меню.');
       window.scrollLock.enableScrolling();
-    }
+    };
 
     burgerButton.addEventListener('click', () => {
       if (!header.classList.contains('header--opened')) {
         header.classList.add('header--opened');
         header.setAttribute('aria-label', 'Закрыть бургер меню.');
         window.scrollLock.disableScrolling();
-
 
         const burgerList = document.querySelector('.header__navigation-list');
 
