@@ -2,6 +2,8 @@
   padding: 40px 120px;
   position: absolute;
   background-color: transparent;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
