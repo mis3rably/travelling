@@ -2320,6 +2320,10 @@ button,
   padding: 40px 120px;
   position: absolute;
   background-color: transparent;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
