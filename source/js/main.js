@@ -22,9 +22,6 @@ window.addEventListener('DOMContentLoaded', () => {
       headerHeight = header.offsetHeight;
     };
 
-    console.log(headerHeight);
-    console.log(parseInt(currentHeroPadding, 10));
-
     if (header.offsetHeight > parseInt(currentHeroPadding, 10)) {
       adjustSlidesPadding();
     }
