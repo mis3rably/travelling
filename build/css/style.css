@@ -2205,6 +2205,10 @@ button,
   padding: 40px 120px;
   position: absolute;
   background-color: transparent;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2217,22 +2221,20 @@ button,
   z-index: 2;
 }
 .header::before {
-  content: "";
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #000000;
+  width: 100vw;
+  height: 1000%;
   opacity: 0;
+  background-color: #000000;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-.header--opened {
-  position: fixed;
-  top: 0;
-}
 .header--opened::before {
+  content: "";
   opacity: 0.5;
 }
 @media (max-width: 1199px) {
@@ -2331,6 +2333,22 @@ button,
 }
 
 @keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein-half {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein-half {
   from {
     opacity: 0;
   }

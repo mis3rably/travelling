@@ -15,15 +15,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $color-default-black;
+    width: 100vw;
+    height: 1000%;
     opacity: 0;
+    background-color: $color-default-black;
     transition: opacity $trans-default;
   }
 
   &--opened {
-    position: fixed;
-    top: 0;
-
     &::before {
       content: "";
       opacity: 0.5;
@@ -95,6 +94,16 @@
 }
 
 @keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein-half {
   from {
     opacity: 0;
   }
