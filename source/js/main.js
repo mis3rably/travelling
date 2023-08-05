@@ -11,15 +11,27 @@ window.addEventListener('DOMContentLoaded', () => {
   const heroSlide = document.querySelectorAll('.hero__slide');
 
   if (header && heroSlide) {
-    let headerHeight = header.offsetHeight;
+    let headerHeight = 180;
+    let currentHeroPadding = window.getComputedStyle(heroSlide[0]).getPropertyValue('padding-top');
+
+    const adjustSlidesPadding = () => {
+      currentHeroPadding = window.getComputedStyle(heroSlide[0]).getPropertyValue('padding-top');
+      heroSlide.forEach((el) => {
+        el.style.paddingTop = `${header.offsetHeight - headerHeight + parseInt(currentHeroPadding, 10)}px`;
+      });
+      headerHeight = header.offsetHeight;
+    };
+
+    console.log(headerHeight);
+    console.log(parseInt(currentHeroPadding, 10));
+
+    if (header.offsetHeight > parseInt(currentHeroPadding, 10)) {
+      adjustSlidesPadding();
+    }
 
     let observer = new MutationObserver(() => {
       if (headerHeight !== header.offsetHeight & headerHeight < header.offsetHeight) {
-        let currentHeroPadding = window.getComputedStyle(heroSlide[0]).getPropertyValue('padding-top');
-        heroSlide.forEach((el) => {
-          el.style.paddingTop = `${header.offsetHeight - headerHeight + parseInt(currentHeroPadding, 10)}px`;
-        });
-        headerHeight = header.offsetHeight;
+        adjustSlidesPadding();
       }
     });
 
