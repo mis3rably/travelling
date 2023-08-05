@@ -16,7 +16,7 @@
     right: 0;
     bottom: 0;
     width: 100vw;
-    height: 1000%;
+    height: calc(100vh * 2);
     opacity: 0;
     background-color: $color-default-black;
     transition: opacity $trans-default;
