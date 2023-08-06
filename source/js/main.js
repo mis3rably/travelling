@@ -13,13 +13,16 @@ window.addEventListener('DOMContentLoaded', () => {
   if (header && heroSlide) {
     let headerHeight = 180;
     let currentHeroPadding = window.getComputedStyle(heroSlide[0]).getPropertyValue('padding-top');
+    const breakpoint = window.matchMedia('(min-width:1200px)');
 
     const adjustSlidesPadding = () => {
-      currentHeroPadding = window.getComputedStyle(heroSlide[0]).getPropertyValue('padding-top');
-      heroSlide.forEach((el) => {
-        el.style.paddingTop = `${header.offsetHeight - headerHeight + parseInt(currentHeroPadding, 10)}px`;
-      });
-      headerHeight = header.offsetHeight;
+      if (breakpoint.matches) {
+        currentHeroPadding = window.getComputedStyle(heroSlide[0]).getPropertyValue('padding-top');
+        heroSlide.forEach((el) => {
+          el.style.paddingTop = `${header.offsetHeight - headerHeight + parseInt(currentHeroPadding, 10)}px`;
+        });
+        headerHeight = header.offsetHeight;
+      }
     };
 
     if (header.offsetHeight > parseInt(currentHeroPadding, 10)) {
@@ -36,6 +39,23 @@ window.addEventListener('DOMContentLoaded', () => {
       childList: true,
       subtree: true,
       characterDataOldValue: true,
+    });
+
+    let currentPadding;
+
+    breakpoint.addEventListener('change', (evt) => {
+      if (!evt.matches) {
+        currentPadding = heroSlide[0].style.paddingTop;
+        heroSlide.forEach((el) => {
+          el.style.paddingTop = '';
+        });
+      } else {
+        if (currentPadding !== heroSlide[0].style.paddingTop) {
+          heroSlide.forEach((el) => {
+            el.style.paddingTop = currentPadding;
+          });
+        }
+      }
     });
   }
 
