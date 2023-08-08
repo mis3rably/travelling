@@ -2336,25 +2336,6 @@ button,
   z-index: 2;
 }
 
-.header::before {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 200vh;
-  opacity: 0;
-  background-color: #000000;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.header--opened::before {
-  content: "";
-  opacity: 0.5;
-}
-
 .header__navigation-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4955,6 +4936,25 @@ button,
     padding: 0 45px;
   }
 
+  .header::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 200vh;
+    opacity: 0;
+    background-color: #000000;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+
+  .header--opened::before {
+    content: "";
+    opacity: 0.5;
+  }
+
   .header {
     padding: 30px 45px;
   }
@@ -4983,10 +4983,11 @@ button,
 
   .header--opened .header__burger-wrapper {
     width: 100%;
+    height: 420px;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 124px 45px 70px;
+    padding: 124px 45px 67px;
     -webkit-transition: -webkit-transform cubic-bezier(0.21, 0.67, 0.58, 1) 0.3s;
     transition: -webkit-transform cubic-bezier(0.21, 0.67, 0.58, 1) 0.3s;
     transition: transform cubic-bezier(0.21, 0.67, 0.58, 1) 0.3s;
@@ -4997,6 +4998,11 @@ button,
   }
 
   .header--opened .header__navigation-list {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5021,7 +5027,7 @@ button,
     letter-spacing: 0.64px;
     text-transform: uppercase;
     color: #2d383f;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .header__phone-link {
@@ -5639,11 +5645,17 @@ button,
   }
 
   .header--opened .header__burger-wrapper {
-    padding: 99px 15px 50px;
+    padding: 99px 15px 45px;
+    height: 343px;
   }
 
   .header--opened .header__navigation-list {
     gap: 22px;
+  }
+
+  .header__navigation-link {
+    font-size: 14px;
+    letter-spacing: 0.56px;
   }
 
   .header__phone-link {
