@@ -4953,6 +4953,7 @@ button,
   .header--opened::before {
     content: "";
     opacity: 0.5;
+    cursor: pointer;
   }
 
   .header {
