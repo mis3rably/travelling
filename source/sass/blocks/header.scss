@@ -9,23 +9,25 @@
   justify-content: space-between;
   z-index: 2;
 
-  &::before {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: calc(100vh * 2);
-    opacity: 0;
-    background-color: $color-default-black;
-    transition: opacity $trans-default;
-  }
-
-  &--opened {
+  @include vp-1199 {
     &::before {
-      content: "";
-      opacity: 0.5;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: calc(100vh * 2);
+      opacity: 0;
+      background-color: $color-default-black;
+      transition: opacity $trans-default;
+    }
+
+    &--opened {
+      &::before {
+        content: "";
+        opacity: 0.5;
+      }
     }
   }
 
@@ -126,17 +128,19 @@
 .header--opened .header__burger-wrapper {
   @include vp-1199 {
     width: 100%;
+    height: 420px;
     position: fixed;
     top: 0;
     left: 0;
-    padding: 124px 45px 70px;
+    padding: 124px 45px 67px;
     transition: transform cubic-bezier(0.21, 0.67, 0.58, 1) 0.3s;
     background-color: $color-default-white;
     animation: fadein 0.5s;
   }
 
   @include vp-767 {
-    padding: 99px 15px 50px;
+    padding: 99px 15px 45px;
+    height: 343px;
   }
 }
 
@@ -155,6 +159,10 @@
 
 .header--opened .header__navigation-list {
   @include vp-1199 {
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-wrap: nowrap;
+    height: 100%;
     display: flex;
     flex-direction: column;
     animation: up 0.5s;
@@ -314,7 +322,12 @@
     letter-spacing: 0.64px;
     text-transform: uppercase;
     color: $color-primary-black;
+    font-size: 16px;
+  }
+
+  @include vp-767 {
     font-size: 14px;
+    letter-spacing: 0.56px;
   }
 }
 

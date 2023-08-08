@@ -62,10 +62,17 @@ window.addEventListener('DOMContentLoaded', () => {
   window.scrollLock = new ScrollLock();
 
   if (burgerButton && header) {
+
     const closeBurgerMenu = () => {
       header.classList.remove('header--opened');
       header.setAttribute('aria-label', 'Открыть бургер меню.');
       window.scrollLock.enableScrolling();
+    };
+
+    const onClickOverlayCloseMenu = (evt) => {
+      if (!evt.target.closest('.header__burger-wrapper') && !evt.target.closest('.header__burger-button')) {
+        closeBurgerMenu();
+      }
     };
 
     burgerButton.addEventListener('click', () => {
@@ -73,6 +80,7 @@ window.addEventListener('DOMContentLoaded', () => {
         header.classList.add('header--opened');
         header.setAttribute('aria-label', 'Закрыть бургер меню.');
         window.scrollLock.disableScrolling();
+        document.addEventListener('click', onClickOverlayCloseMenu, false);
 
         const burgerList = document.querySelector('.header__navigation-list');
 
@@ -83,6 +91,7 @@ window.addEventListener('DOMContentLoaded', () => {
             }
           });
         }
+
       } else {
         closeBurgerMenu();
       }
